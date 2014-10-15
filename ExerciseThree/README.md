@@ -1,6 +1,6 @@
-# Create a telephone directory
+#Create a telephone directory
 
-Allow a users to enter the First Name, Last Name, Cell Phone Provider and Cell Phone number of a contact. Add support for deleting entries. Support multiple users
+Allow a users to enter the First Name, Last Name, Cell Phone Provider and Cell Phone number of a contact. Add support for deleting contacts.
 
 Add a filter function that allows one to filter the data in the telephone directory. The function should take a filter function as a parameter that allows one to filter the entries in the telephone directory.
 
