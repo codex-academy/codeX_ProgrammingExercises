@@ -1,7 +1,7 @@
 
 #Create a game using TDD and then make work in a web browser
 
-##Skills required:
+##Skills required
 
 ### Programming concepts
 
