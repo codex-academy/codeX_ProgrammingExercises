@@ -1,9 +1,9 @@
 
 #Create a game using TDD and then make work in a web browser
 
-Skills required:
+##Skills required:
 
-## Programming concepts
+### Programming concepts
 
 * variables
 * conditional statements
@@ -11,11 +11,13 @@ Skills required:
 * functions
 * basic I/O
 
-## Specific skills
+### Specific skills
 * Javascript
 * JQuery
 * HTML
 * CSS
+
+##Background
 
 Write a simple game where a player needs to enter their name and a skill level easy/intermediate/advanced.
 
