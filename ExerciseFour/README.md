@@ -25,17 +25,17 @@ If the guess is too high it should tell the user the it’s guess is too high or
 
 For example:
 
-* Sorry <user_name> your guess is to low Or Sorry <user_name> your guess is too high 
+ * Sorry <user_name> your guess is to low Or Sorry <user_name> your guess is too high 
 
 If the guess is correct display : 
 
-* Well done, <user_name> the number is <the number>, it took you <number of guesses> guesses”.
+ * Well done, <user_name> the number is <the number>, it took you <number of guesses> guesses”.
 
 If the user selected easy:
 
-*  the max number for the random number seed is 50, if intermediate it is 250 and if hard it should be 1000.
+ * the max number for the random number seed is 50, if intermediate it is 250 and if hard it should be 1000.
 
 Bonus features: 
-	* Let the  game remember the three best attempts. 
-	* Congratulate the user if he is in the top 3.
+  * Let the  game remember the three best attempts. 
+  * Congratulate the user if he is in the top 3.
 
