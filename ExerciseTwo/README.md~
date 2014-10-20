@@ -11,7 +11,7 @@ Do this using TDD using QUnit.
 
 ## Create 3 files:
 	* test-number-utility.html 
-	* test-number-utility.jos : write your tests in here
+	* test-number-utility.js : write your tests in here
 	* number-utility.js : write your number utility in here
 
 ## Something more to think about: 
