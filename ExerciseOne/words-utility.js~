@@ -1,0 +1,59 @@
+/*
+var theWords = "A Unit Test is a piece of code that is using your code, exercising some scenarios that it expects to work in a certain way. Unit tests are isolated from external dependencies unlike integration tests. We will focus on Unit Tests.";
+
+*/
+
+
+ WordsUtility = function(words){
+
+       
+
+	this.countWords = function(){
+
+         var numberOfWords= words.split(" ").length;
+		return words.split(" ").length;
+	}
+
+	this.longestWord = function(){
+
+         
+	
+		}
+       
+ 
+
+        this.averageWordLength= function(){
+      var wordCollection=[];
+      var wordCollection=words.split(" "); 
+	  
+       return numberOfWords.length / numberOfWords
+		
+	}
+
+         this.wordsWithTheSameLength= function(){
+
+
+
+}
+
+        this.shortestWord= function(){
+
+      
+
+
+} 
+
+      this.mostWordsEndWith= function(){
+
+
+
+}
+
+     this.mostWordsStartWith= function(){
+
+
+
+}
+
+
+

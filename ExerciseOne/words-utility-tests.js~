@@ -16,41 +16,27 @@ QUnit.test( "find the longest word", function( assert ) {
 QUnit.test( "the average word length of words supplied", function( assert ) {
   	var wordsUtility = new WordsUtility(theWords);
 	
-        assert.equal(wordsUtility.averageWordLength(), " 5.585365853658536");
+        assert.equal(wordsUtility.averageWordLength(), "1");
 });
 
 QUnit.test( "find words with the same length", function( assert ) {
 
-  	var wordsUtility = new WordsUtility(theWords);
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo yoda");
   	var words = wordsUtility.wordsWithTheSameLength();
-    assert.equal(wordsUtility.wordsWithTheSameLength(), " ")
 });
 
 
 QUnit.test( "no words with the same length return nothing", function( assert ) {
-  	var wordsUtility = new WordsUtility(theWords);
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo yoda");
 
-  	assert.equal(0, wordsUtility.wordsWithTheSameLength().length, 5);
+  	assert.equal(0, wordsUtility.wordsWithTheSameLength().length);
 
 });
 
 QUnit.test( "find the shortest word", function( assert ) {
-  	var wordsUtility = new WordsUtility(theWords);
-	assert.equal(wordsUtility.shortestWord(), "A");
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo");
+	assert.equal(wordsUtility.shortestWord(), "ola");
 });
-
-
-QUnit.test( "most words end with", function( assert ) {
-    var wordsUtility = new WordsUtility(theWords);
-  assert.equal(wordsUtility.mostWordsEndWith(), "A");
-});
-
-QUnit.test( "most words start with", function( assert ) {
-    var wordsUtility = new WordsUtility(theWords);
-  assert.equal(wordsUtility.mostWordsStartWith(), "A");
-});
-
-
 
 QUnit.jUnitReport = function(report) {
     console.log(report.xml);
