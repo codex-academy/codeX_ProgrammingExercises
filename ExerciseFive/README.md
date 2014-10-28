@@ -17,6 +17,7 @@ Using the Word Utility that you developed in [Exercise One](../ExerciseOne/READM
 Once the user added the sentence display:
  
 	* the number of words in the sentence
+	* the average word length
 	* the longest word
 	* the shortest word
 
