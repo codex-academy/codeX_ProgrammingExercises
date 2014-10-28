@@ -6,7 +6,7 @@ HTML, CSS, Javascript & JQuery
 
 ##Background
 
-Using the Word Utility that you developed in [Exercise One](./ExerciseOne/README.md) create a web page where a user can add a sentence in a textarea. 
+Using the Word Utility that you developed in [Exercise One](../ExerciseOne/README.md) create a web page where a user can add a sentence in a textarea. 
 
 Once the user added the sentence display:
  
