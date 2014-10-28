@@ -1,45 +1,35 @@
-var AddressBook = []; 
+function AddressBook(){
+    var contactList = [];
+    this.addContact = function(contact){
+		contactList.push(contact); 
+	};
+	this.deleteContact = function(contact){
+		var index = contactList.indexOf(contact);
+		contactList.splice(index, 1);   
+       
+	};
+	this.print = function(){
+		console.log(contactList);	
+	}; 
+    
+        this.Find = function(Needed){
+        var answer = contactList.filter(function(x){
+        
+        for(var field in x){
+    		
+		    if(x[field] === Needed){
+    	        return x[field];   
+		    }  
+	   }
+       
+        }); 
+        console.log(answer);
+    };
+}
 
 function Contact(firstName, lastName, cellProvider, cellNumber){
     this.firstName = firstName;
 	this.lastName = lastName;
 	this.cellProvider = cellProvider;
-	this.cellNumber = cellNumber; 
-	this.addToBook = function(){
-		AddressBook.push(this);		
-		}; 
-    this.deleteFromBook = function(){
-        var index = AddressBook.indexOf(this); 
-        AddressBook.splice(index,index);
-    };
+	this.cellNumber = cellNumber;
 } 
-
-/* var filterednames = AddressBook.filter(function(obj) {
-    if (obj.firstName === "Ndabenhle"){
-        console.log(obj.cellNumber);
-    }
-}); 
- */ 
- 
- function findCellNumber(contactName){ 
-     AddressBook.filter(function(obj){
-     if(obj.firstName == contactName){
-         return(obj.cellNumber);
-            }
-         }
-     );
- }
-
-
-var nda = new Contact("Ndabenhle", "Ngulube", "Vodacom", "0798900606"); 
-var nhla = new Contact("Nhlanhla", "Ngulube", "MTN", "0798900607"); 
-var thomas = new Contact("Thomas","Razuko", "CellC", "0832546071");
-nda.addToBook(); 
-nhla.addToBook(); 
-thomas.addToBook();
-console.log(AddressBook); 
-console.log()
-thomas.deleteFromBook();
-console.log(AddressBook); 
-
-findCellNumber("Ndabenhle");
