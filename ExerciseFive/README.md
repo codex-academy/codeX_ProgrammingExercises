@@ -4,6 +4,12 @@
 
 HTML, CSS, Javascript & JQuery
 
+###Codecademy courses
+
+* http://www.codecademy.com/en/tracks/jquery - Mandatory
+* http://www.codecademy.com/en/tracks/web - useful
+
+
 ##Background
 
 Using the Word Utility that you developed in [Exercise One](../ExerciseOne/README.md) create a web page where a user can add a sentence in a textarea. 
