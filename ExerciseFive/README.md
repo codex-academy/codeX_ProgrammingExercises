@@ -6,7 +6,9 @@ HTML, CSS, Javascript & JQuery
 
 ##Background
 
-Using the Word Utility that you developed create a web page where a user can add a sentence in a textarea. Once the user added the sentence display
+Using the Word Utility that you developed create a web page where a user can add a sentence in a textarea. 
+
+Once the user added the sentence display:
  
 	* the number of words in the sentence
 	* the longest word
@@ -16,7 +18,8 @@ Using the Word Utility that you developed create a web page where a user can add
 
 ###Word cloud
 
-Create a wordcloud (think tagcloud) of the given sentence: 
+Create a wordcloud (think tagcloud) of the given sentence:
+ 
 	* using the letter count the words start with. 
 	* words that starts with the letter that occurs the most should be the biggest
 	* words starting with the letter that occurs least should be the smallest.
