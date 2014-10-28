@@ -18,7 +18,7 @@ Once the user added the sentence display:
 
 ###Word cloud
 
-Create a wordcloud (think tagcloud) of the given sentence:
+Create a wordcloud (think tagcloud - http://www.lucaongaro.eu/demos/jqcloud/) of the given sentence:
 
 	* using the letter count the words start with. 
 	* words that starts with the letter that occurs the most should be the biggest
