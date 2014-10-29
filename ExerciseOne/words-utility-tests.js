@@ -23,14 +23,79 @@ QUnit.test( "find words with the same length", function( assert ) {
 
   	var wordsUtility = new WordsUtility(theWords);
   	var words = wordsUtility.wordsWithTheSameLength();
-    assert.equal(wordsUtility.wordsWithTheSameLength(), " ")
+    assert.deepEqual(wordsUtility.wordsWithTheSameLength(), {  "1": [
+    "a",
+    "a",
+    "a"
+  ],
+  "10": [
+    "exercising"
+  ],
+  "11": [
+    "integration"
+  ],
+  "12": [
+    "dependencies"
+  ],
+  "2": [
+    "is",
+    "of",
+    "is",
+    "it",
+    "to",
+    "in",
+    "we",
+    "on"
+  ],
+  "3": [
+    "are"
+  ],
+  "4": [
+    "unit",
+    "test",
+    "code",
+    "that",
+    "your",
+    "some",
+    "that",
+    "work",
+    "way.",
+    "unit",
+    "from",
+    "will",
+    "unit"
+  ],
+  "5": [
+    "piece",
+    "using",
+    "code,",
+    "tests",
+    "focus"
+  ],
+  "6": [
+    "unlike",
+    "tests.",
+    "tests."
+  ],
+  "7": [
+    "expects",
+    "certain"
+  ],
+  "8": [
+    "isolated",
+    "external"
+  ],
+  "9": [
+    "scenarios"
+  ]
+})
 });
 
 
 QUnit.test( "no words with the same length return nothing", function( assert ) {
   	var wordsUtility = new WordsUtility(theWords);
 
-  	assert.equal(0, wordsUtility.wordsWithTheSameLength().length, 5);
+  	assert.equal(undefined, wordsUtility.wordsWithTheSameLength().length, 5);
 
 });
 
@@ -42,12 +107,12 @@ QUnit.test( "find the shortest word", function( assert ) {
 
 QUnit.test( "most words end with", function( assert ) {
     var wordsUtility = new WordsUtility(theWords);
-  assert.equal(wordsUtility.mostWordsEndWith(), "A");
+  assert.equal(wordsUtility.mostWordsEndWith(), "s");
 });
 
 QUnit.test( "most words start with", function( assert ) {
     var wordsUtility = new WordsUtility(theWords);
-  assert.equal(wordsUtility.mostWordsStartWith(), "A");
+  assert.equal(wordsUtility.mostWordsStartWith(), "t");
 });
 
 

@@ -1,0 +1,78 @@
+
+WordsUtility = function(words){
+
+         var numberOfWords= words.split("").length;
+
+	this.countWords = function(){
+		return words.split(" ").length;
+	}
+
+	this.longestWord = function(){
+		
+          
+
+         var words = words.split(" ").length;
+
+         var longest = 0;
+
+         var answer = "";
+
+        for(var i=0; i<=words.length; i++) {
+
+        words[i] = words[i].replace(/[^a-zA-Z]+/g, "");
+
+        if(words[i].length>longest) {
+
+        longest = words[i].length;
+
+         answer = words[i];
+
+   
+
+  }
+
+  return answer; 
+
+}
+           
+
+		
+         
+
+
+	}
+
+        this.averageWordLength= function(){
+	  
+         var WordLengthWithoutSpace = theWords.length - (numberOfWords-2);	
+	  
+           return WordLengthWithoutSpace / numberOfWords
+          
+		
+	}
+
+         this.wordsWithTheSameLength= function(){
+
+
+
+}
+
+        this.shortestWord= function(){
+
+
+
+
+} 
+
+      this.mostWordsEndWith= function(){
+
+
+
+}
+
+     this.mostWordsStartWith= function(){
+
+
+
+}
+}

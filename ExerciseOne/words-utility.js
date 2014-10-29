@@ -55,17 +55,21 @@
 		}
 
          this.wordsWithTheSameLength= function(){
-           var sameLength = 0;
-             var sameCollection=[]
-              var wordCollection=words.split(" "); 
-         for(i=0;i<wordCollection; i++){
-            if(sameLength.length=wordCollection[i].length){
-              sameCollection.push(i);i++;
-              //return sameLength[].length;
-              //return 
-               }
-            }
-            return sameCollection[i]
+           var wordCollection=words.split(" ");
+           var SameLength={};
+
+        for(i=0;i<wordCollection.length;i++){
+ 
+          var Lang = wordCollection[i].toLowerCase();
+            if(!SameLength[Lang.length]){
+         SameLength[Lang.length]=[];
+  }
+         SameLength[Lang.length].push(Lang);
+  
+}
+
+      
+      return SameLength;
          }
 
  
@@ -97,25 +101,51 @@
  
 
       this.mostWordsEndWith= function(){
-      	   var EndWith=0;
+      	  
            var wordCollection=words.split(" ");
-           for(i=0;i<wordCollection.length;i++){
-           if(EndWith.length === wordCollection[i].length-1){
-               EndWith=wordCollection[i]
+           var EndWith={};
 
-           }
-
-
-           }
-return  EndWith
+ 
+          for(i=0;i<wordCollection.length;i++){
+          var letter=wordCollection[i].charAt(wordCollection[i].length-1).toLowerCase();
+            if(letter==="."||letter==","){
+              letter=wordCollection[i].charAt(wordCollection[i].length-2).toLowerCase();
+                    }
+            if(!EndWith[letter]){
+                  EndWith[letter]=[];
+ 
+              }
+    EndWith[letter].push(letter);
+   
+   
+         }
+   
+ 
+return  letter
 }
 
      this.mostWordsStartWith= function(){
 
-       StartWith=0;
+      
        var wordCollection=words.split(" ");
        
-       //for(){}
+var StartWith={};
+
+
+for(i=0;i<wordCollection.length;i++){
+ 
+  var letter=wordCollection[i][0].toLowerCase();
+  if(!StartWith[letter]){
+  StartWith[letter]=[];
+  }
+    StartWith[letter].push(wordCollection[i]);
+
+}
+
+
+      
+      return letter;
+  
 	}
 
 
