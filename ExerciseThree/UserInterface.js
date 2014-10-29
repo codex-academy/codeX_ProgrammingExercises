@@ -1,4 +1,6 @@
-$(document).ready(function(){
+$(document).ready(function(){ 
+
+//creating Address Book Class
   
 function AddressBook(){
     
@@ -40,6 +42,8 @@ function AddressBook(){
     	};
 };
 
+// Creating Contact Class
+
 function Contact(firstName, lastName, cellProvider, cellNumber){
     	this.firstName = firstName;
 	this.lastName = lastName;
@@ -47,35 +51,82 @@ function Contact(firstName, lastName, cellProvider, cellNumber){
 	this.cellNumber = cellNumber;
 	};
 
+// Allowing Contacts to inherit special printing format
+
 Contact.prototype.toString = function(){
 	return this.firstName + " "+ this.lastName + ": " + this.cellNumber;
-}
- 
+} 
 
-var yellowPages = new AddressBook();
+//Adding method to jQuery Validation Library to check that inputs are alphabetical letters  
 
-console.log("We are ready!");	
+jQuery.validator.addMethod("alpha", function(value, element) {
+return this.optional(element) || value == value.match(/^[a-zA-Z]+$/);
+},"Only Characters Allowed.");
 
-$("#add").click(function(){ 
+//Creating a new instance of the Address Book class
 
-	var contact1 = new Contact($("#firstname").val(),$("#lastname").val(),$("#cellprovider").val(),$("#cellnumber").val());
+var yellowPages = new AddressBook(); 
+
+//Creating the validation rules of the jQuery Validation plugin
+
+$("#MyForm").validate({
+      rules: {
+	firstname: {
+		required:true, 
+		alpha:true 
+		}, 
+	lastname: {
+		required:true, 
+		alpha:true 
+		}, 
+
+	cellprovider: {
+		required:true, 
+		alpha:true 
+		}, 
+	cellnumber: {
+		required:true, 
+		number:true
+		}  	
+      }
+}); 
+
+//Handling of the submitting of contact details in the html from
+
+$("#MyForm").submit(function(){ 
+	
+	if($("#MyForm").valid() ){
+ 	
+		var contact1 = new Contact($("#firstname").val(),$("#lastname").val(),$("#cellprovider").val(),$("#cellnumber").val());
 		
-	yellowPages.addContact(contact1);
+		yellowPages.addContact(contact1);
 	
-	$("#numbers").append("<div class='AddedContacts'>"+contact1 +" "+ "<a href='#/"+ contact1.cellNumber + "' class='remove_field'>Delete</a>"+"</div>") 
+		$("#numbers").append("<div class='AddedContacts'>"+contact1 +" "+ "<a href='#/"+ contact1.cellNumber + "' class='remove_field'>Delete</a>"+"</div>") 
 	
-	$("#searchBox").animate({height: "+=25px"},'fast'); 
+		$("#searchBox").animate({height: "+=25px"},'fast'); 
 
-	$("#container").animate({height: "+=25px"},'fast'); 
+		$("#container").animate({height: "+=25px"},'fast'); 
 
-	$("#firstname").val(""); 
-	$("#lastname").val("");  
-	$("#cellprovider").val("");  
-	$("#cellnumber").val(""); 
+		$("#firstname").val(""); 
+	
+		$("#lastname").val("");  
 
-	yellowPages.print();		 
+		$("#cellprovider").val("");  
 
-	}); 
+		$("#cellnumber").val(""); 
+	
+		return false;
+	} 
+
+	else{ 
+
+	alert("Oops! One or more fields are incorrectly entered."); 
+
+	}	
+	
+});  
+
+//Handles the deleting of a contact from the address book
 
 $('#numbers').on('click', '.remove_field',function(){
 
@@ -97,6 +148,8 @@ $('#numbers').on('click', '.remove_field',function(){
 
 
 	}); 
+
+//Handles the search button of the address book
 
 $("#RunSearch").click(function(){
 
@@ -121,11 +174,14 @@ $("#RunSearch").click(function(){
 
 });
   
+//Handles the refresh button of the address book
 
 $("#refresh").click(function(){
 	
 	$("#numbers2").empty();
+
 	$("#numbers2").hide(); 
+
 	$("#numbers").show();
 	
 }) 

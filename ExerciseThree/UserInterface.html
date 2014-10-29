@@ -3,40 +3,52 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>  
 
   <meta charset="utf-8">
+
   <title>Addy Book</title> 
 
 <script type="text/javascript" src="UserInterface.js"></script> 
 
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script> 
+
 <link rel="stylesheet" type="text/css" href="UserInterface.css">  
 </head>
+
+
 <body>
+
 <center>  
 <div id="container"> 
 <center><h1>My Address Book </h1></center>
   <br>
   <center>
 
-First Name:<input type="text" name="firstname" placeholder="Enter First Name here" id="firstname" class="inputs" /><br><br>
-Last Name:<input type="text" name="lastname" placeholder="Enter Last Name here" id="lastname" class="inputs"  /><br><br>
-Cell Provider<input type="text" name="cellprovider" placeholder="Enter Cell Provider here" id="cellprovider" class="inputs" /><br><br>
-Cell Number:<input type="text" name="cellnumber" placeholder="Enter Cell Number here" id="cellnumber" class="inputs" /><br><br>
+<form id="MyForm">
 
-<button type="submit" value="Submit" id="add">Submit</button>
+First Name:<input type="text" name="firstname" placeholder="Enter First Name here" id="firstname" class="inputs" /><br><br>
+Last Name:<input type="text" name="lastname" placeholder="Enter Last Name here" id="lastname" class="inputs" /><br><br>
+Cell Provider<input type="text" name="cellprovider" placeholder="Enter Cell Provider here" id="cellprovider" class="inputs" /><br><br>
+Cell Number:<input type="text" name="cellnumber" placeholder="Enter Cell Number here" id="cellnumber" class="inputs"/><br><br>
+
+<input type="submit" value="Add Contact" id="add"/>
+
+</form>
 
   </center> 
   
-  <center>
-  <div id="searchBox">    
+  <center> 
+
+  <div id="searchBox">
+    
 <center><h3>Search</h3></center>
     
-      
-      <input type="text" name="search" id="search" class="inputs"/>
+     
+    <input type="text" name="search" id="search" class="inputs3"/>
     <button type="submit" value="search" id="RunSearch">Search</button> 
     <button type="submit" value="refresh" id="refresh">Refresh</button>  
-	
+ 
       
     
     <br>

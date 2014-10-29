@@ -1,7 +1,7 @@
 #container {
   
   height: 520px; 
-  width: 500px; 
+  width: 700px; 
   border: 1px solid orange; 
   background-color: orange; 
   border-radius: 15px;
@@ -11,7 +11,7 @@
 #searchBox {
   
   height: 140px;
-  width: 450px;
+  width: 550px;
   border: 2px solid #FF4500; 
   border-radius: 15px;
   margin-top: 20px;
@@ -31,10 +31,15 @@
 
   height: 250px;
   width: 300px;
-  //border: 1px solid black; 
+  //border: 1px solid green; 
   //background-color: #EC9242;
 
 }  
+
+#errmsg
+{
+color: red;
+}
 
 .inputs {
   border-radius: 5px; 
