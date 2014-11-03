@@ -1,7 +1,7 @@
 #container {
   
-  height: 520px; 
-  width: 600px; 
+  height: 550px; 
+  width: 300px; 
   border: 1px solid orange; 
   background-color: orange; 
   border-radius: 15px;
@@ -11,7 +11,7 @@
 #searchBox {
   
   height: 140px;
-  width: 550px;
+  width: 250px;
   border: 2px solid #FF4500; 
   border-radius: 15px;
   margin-top: 20px;

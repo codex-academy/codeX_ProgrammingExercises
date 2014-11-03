@@ -9,9 +9,13 @@
 
   <title>Addy Book</title> 
 
+<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable= no"/> 
+
 <script type="text/javascript" src="UserInterface.js"></script> 
 
 <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script> 
+
+<link href="dist/css/ratchet.min.css" rel="stylesheet">  
 
 <link rel="stylesheet" type="text/css" href="UserInterface.css">  
 </head>
@@ -21,52 +25,69 @@
 
 <center>  
 <div id="container"> 
-<center><h1>My Address Book </h1></center>
-  <br>
-  <center>
+
+<header class="bar-title">
+
+	<h1 class="title">My Address Book </h1>
+
+</header> 
 
 <form id="MyForm">
 
-First Name:<input type="text" name="firstname" placeholder="Enter First Name here" id="firstname" class="inputs" /><br><br>
-Last Name:<input type="text" name="lastname" placeholder="Enter Last Name here" id="lastname" class="inputs" /><br><br>
-Cell Provider<input type="text" name="cellprovider" placeholder="Enter Cell Provider here" id="cellprovider" class="inputs" /><br><br>
-Cell Number:<input type="text" name="cellnumber" placeholder="Enter Cell Number here" id="cellnumber" class="inputs"/><br><br>
+	<div class="input-group">
 
-<input type="submit" value="Add Contact" id="add"/>
+		First Name:<input type="text" name="firstname" placeholder="Enter First Name here" id="firstname" class="inputs" />
+		Last Name:<input type="text" name="lastname" placeholder="Enter Last Name here" id="lastname" class="inputs" />
+		Cell Provider<input type="text" name="cellprovider" placeholder="Enter Cell Provider here" id="cellprovider" class="inputs" />
+		Cell Number:<input type="text" name="cellnumber" placeholder="Enter Cell Number here" id="cellnumber" class="inputs"/>
+		
+		<input type="submit" value="Add Contact" id="add"/>
+	</div> 
 
 </form>
 
-  </center> 
-  
-  <center> 
-
-  <div id="searchBox">
-    
-<center><h3>Search</h3></center>
-    
-     
-    <input type="text" name="search" id="search" class="inputs3"/>
-    <button type="submit" value="search" id="RunSearch">Search</button> 
-    <button type="submit" value="refresh" id="refresh">Refresh</button>  
- 
-      
-    
-    <br>
-    <div id="boundary">
-	<div id="numbers">
-
 	
 
+
+
+</center> 
+  
+<center> 
+
+	<div id="card">
+    
+		<center><h3 class=""title>Search</h3></center>
+  
+ 
+     
+			    <input type="text" name="search" id="search" class="inputs3"/>
+			    <button type="submit" value="search" id="RunSearch">Search</button> 
+			    <button type="submit" value="refresh" id="refresh">Refresh</button>  
+			 
+   
+    <div id="boundary">
+	
+	<div id="numbers">
+
 	</div> 
+	
 	<div id ="numbers2"> 
 
 	</div> 
 
     </div>
-  </div> 
-  </center>
+
+</div> 
+
+</center>
   
   </div>
-  </center>
+
+</center> 
+
+<script src="dist/js/ratchet.min.js">
+
+</script>
+
 </body>
 </html>

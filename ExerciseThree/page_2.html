@@ -1,0 +1,162 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title> 
+My Phonebook
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> 
+
+<link href="dist/css/ratchet.min.css" rel="stylesheet"> 
+
+<link href="index.css" rel="stylesheet"> 
+
+<script type="text/javascript" src="UserInterface.js"></script> 
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>  
+
+</head> 
+
+<body> 
+
+<div id="ShowContactsPage"> 
+
+	<header id="topBar" class="bar bar-nav"> 
+		
+		<a class="icon icon-search pull-left" id="SearchIcon"></a>
+
+		<a class="icon icon-compose pull-right" id="ButtonAddContact"></a>
+ 
+		<h1 class="title">Contacts</h1>
+	</header> 
+
+
+<ul id="numbersList" class="table-view">
+	<!--<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash" id='deleteContactbutton'></span>
+			</div> 
+			 
+		
+	</li> --> 
+
+	 
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="AddContactsPage"> 
+
+<header id="toppy" class="bar bar-nav"> 
+	<h1 class="title">Add Contact</h1> 
+	<a class="icon icon-left pull-left" id="BackButton"></a>
+</header> 
+
+<div class="card"> 
+
+
+<div class="input-group">
+
+	<form id="MyForm">
+
+	
+
+		<input type="text" name="firstname" placeholder="Enter First Name here" id="firstname" class="inputs" />
+		<input type="text" name="lastname" placeholder="Enter Last Name here" id="lastname" class="inputs" />
+		<input type="text" name="cellprovider" placeholder="Enter Cell Provider here" id="cellprovider" class="inputs" />
+		<input type="text" name="cellnumber" placeholder="Enter Cell Number here" id="cellnumber" class="inputs"/>
+
+	
+
+<!--	<input type="submit" value="Add Contact" id="add" /> -->
+
+</form>
+
+</div>
+ 
+
+</div> 
+
+
+
+	<button class="btn btn-positive btn-block" type="submit" form="MyForm" value="Submit" class= "Buttons">Add Contact</button> 
+
+
+<!--	<button class="btn btn-negative btn-block" value="Submit" id="BackButton" class = "Button">Back</button> -->
+
+	
+
+<script src="dist/js/ratchet.min.js">
+
+</script>
+
+</div> 
+
+
+
+<div id = "SearchContactsPage"> 
+	
+	<header id="topBar" class="bar bar-nav"> 
+		
+		<a class="icon icon-left pull-left" id="SearchBackButton"></a>
+ 
+		<h1 class="title">Contacts</h1>
+	</header> 
+
+	<form id="SearchInput"> 
+
+		<input type="text" name="search" placeholder="search" id="search" class="input" />
+
+	</form> 
+
+		<button class="btn btn-positive pull-left" id="RunSearch" type="submit" form="SearchInput" value="Submit"><span class="icon icon-search"></span>Search</button>
+
+		<button class="btn btn-primary pull-right" id="refresh">  <span class="icon icon-refresh"></span>Refresh</button> 
+
+		<br><br> 
+
+			<ul id="ItemsToBeSearched">  
+			
+
+			</ul> 
+
+			<ul id="SearchResults"> 
+
+			
+			</ul>
+ 
+
+	<!--	<button class="btn btn-negative btn-block" id="SearchBackButton">Back</button> -->
+</div>
+</body> 
+
+</html>

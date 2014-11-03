@@ -1,0 +1,137 @@
+<!DOCTYPE html> 
+
+<html> 
+
+<head> 
+
+<title> 
+My Phonebook
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script> 
+
+<link href="dist/css/ratchet.min.css" rel="stylesheet"> 
+
+<link href="index.css" rel="stylesheet"> 
+
+<script type="text/javascript" src="UserInterface.js"></script> 
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>  
+
+</head> 
+
+
+<body> 
+
+	<header id="topBar" class="bar bar-nav"> 
+		
+		<a class="icon icon-compose pull-right"></a>
+ 
+		<h1 class="title">Contacts</h1>
+	</header> 
+
+
+<ul id="numbersList" class="table-view">
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li> 
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li> 
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li>	
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li> 
+
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li>	
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Number 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li> 
+
+	<li class="table-view-cell media">
+			
+			<img class="media-object pull-left" src="http://placehold.it/42x42">
+			<div class="media-body">
+			Name
+				<p>Numberz 
+				</p> 
+			<span class="media-object pull-right icon icon-trash"></span>
+			</div> 
+			 
+		
+	</li> 
+</ul>
+
+
+
+</body> 
+
+</html> 
+

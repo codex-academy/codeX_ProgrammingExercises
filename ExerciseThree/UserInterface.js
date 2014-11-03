@@ -1,5 +1,14 @@
 $(document).ready(function(){ 
 
+$("#AddContactsPage").hide(); 
+
+$("#SearchContactsPage").hide();
+
+$("#ShowContactsPage").show(); 
+
+$("#SearchResults").hide(); 
+
+ 
 //creating Address Book Class
   
 function AddressBook(){
@@ -91,6 +100,17 @@ $("#MyForm").validate({
       }
 }); 
 
+
+$("#ButtonAddContact").click(function(){
+
+	$("#ShowContactsPage").hide();	
+
+	$("#AddContactsPage").show(); 
+
+	
+	
+}) 
+
 //Handling of the submitting of contact details in the html from
 
 $("#MyForm").submit(function(){ 
@@ -99,13 +119,26 @@ $("#MyForm").submit(function(){
  	
 		var contact1 = new Contact($("#firstname").val(),$("#lastname").val(),$("#cellprovider").val(),$("#cellnumber").val());
 		
-		yellowPages.addContact(contact1);
+		yellowPages.addContact(contact1); 
 	
-		$("#numbers").append("<div class='AddedContacts'>"+contact1 +" "+ "<a href='#/"+ contact1.cellNumber + "' class='remove_field'>Delete</a>"+"</div>") 
+		yellowPages.print();
 	
-		$("#searchBox").animate({height: "+=25px"},'fast'); 
+		$("#numbersList").append(
 
-		$("#container").animate({height: "+=25px"},'fast'); 
+		"<li class='table-view-cell media'>"+ 
+		"<img class='media-object pull-left' src='http://placehold.it/42x42'>"+
+			"<div class='media-body'>" +
+			contact1 +
+			"<br><p>" +
+			contact1.cellProvider + 
+			"</p>" + 
+			"</div>"+ 
+		"<button class='DeleteContactButton' id='"+ contact1.cellNumber + "'>Delete</button>"+ 
+			 "</li>");  
+	
+		$("#ItemsToBeSearched").append("<li id ='"+ contact1.cellNumber + "' class='table-view-cell'>" + contact1 + "</li>" 
+		
+		); 
 
 		$("#firstname").val(""); 
 	
@@ -114,6 +147,10 @@ $("#MyForm").submit(function(){
 		$("#cellprovider").val("");  
 
 		$("#cellnumber").val(""); 
+
+		$("#AddContactsPage").hide(); 
+
+		$("#ShowContactsPage").show(); 
 	
 		return false;
 	} 
@@ -124,66 +161,101 @@ $("#MyForm").submit(function(){
 
 	}	
 	
-});  
+}); 
+
+
+$("#BackButton").click(function(){
+
+	$("#AddContactsPage").hide(); 
+
+	$("#ShowContactsPage").show();
+	
+})  
 
 //Handles the deleting of a contact from the address book
 
-$('#numbers').on('click', '.remove_field',function(){
 
-	$(this).parent('div').remove() 
 
-	var id = $(this).attr("href"); 
+$("#numbersList").on("click", ".DeleteContactButton", function(){
 
-	var id2 = (id.substring(2,id.length)); 
+	var id = $(this).attr("id"); 
 
-	alert("Contact has been deleted!") 
+	//var id2 = (id.substring(2,id.length)); 
+	
+	$(this).parent('li').remove(); 
 
-	yellowPages.deleteContact(id2); 
+	$("#ItemsToBeSearched").find("li#" + id).remove();	
 
-	$("#searchBox").animate({height: "-=25px"},'fast'); 
-
-	$("#container").animate({height: "-=25px"},'fast'); 
+	yellowPages.deleteContact(id); 
 
 	yellowPages.print(); 
 
+	$("#ShowContactsPage").hide();  
+
+	$("#ShowContactsPage").show();
 
 	}); 
 
+//handles search incon click 
+
+$("#SearchIcon").click(function(){
+
+	$("#AddContactsPage").hide(); 
+
+	$("#ShowContactsPage").hide(); 
+
+	$("#SearchContactsPage").show(); 
+
+	$("#SearchResults").hide();  
+
+	$("#ItemsToBeSearched").show();	
+
+}) 
+
+$("#SearchBackButton").click(function(){
+
+	$("#SearchContactsPage").hide(); 
+
+	$("#ShowContactsPage").show();
+
+}) 
+
 //Handles the search button of the address book
 
-$("#RunSearch").click(function(){
+$("#RunSearch").click(function(){ 
+	
+	$("#SearchResults").empty();
 
 	var FilteredList = yellowPages.Find($("#search").val()); 
 	
 	console.log(FilteredList);
 	
-	$("#numbers").hide(); 
+	$("#ItemsToBeSearched").hide(); 
 	
-	$("#numbers2").show(); 
+	$("#SearchResults").show(); 
 	
-	//$("#boundary").append("<div id='numbers2'> </div>")  
-
-	//$("div#numbers").attr("id", "numbers2");
-	//yellowPages.Find($("#search").val())
-	
-
 	for(i=0; i < FilteredList.length; i++){
 	
-		$("#numbers2").append(FilteredList[i]+ "<br>");	
+		$("#SearchResults").append(
+
+		"<li class='table-view-cell'>" + FilteredList[i]+ "</li>");	
 	} 
 
-});
+	return false; 
+
+}); 
+	
   
 //Handles the refresh button of the address book
 
 $("#refresh").click(function(){
-	
-	$("#numbers2").empty();
 
-	$("#numbers2").hide(); 
-
-	$("#numbers").show();
+	$("#SearchResults").empty();	
 	
-}) 
+	$("#SearchResults").hide(); 
+
+	$("#ItemsToBeSearched").show();
+	
+}); 
 
 });
