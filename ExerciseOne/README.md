@@ -1,6 +1,6 @@
 #Exercise 1
 	
-##Given a list of words separated with spaces. Create a terminal application that can do the following.
+##Given a list of words separated with spaces. Create a application that can do the following.
 
 	* Find the number of words given
 	* Find the longest word, print the word and it’s length
