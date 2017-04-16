@@ -42,7 +42,7 @@ QUnit.test( "The letter which the most words start with", function( assert ){
 
 QUnit.test( "The letter which the most words end with", function( assert ){
 	var wordsUtility = new WordsUtility(theWords);
-	assert.equal(wordsUtility.popularLetterEnds(),"s")
+	assert.equal(wordsUtility.popularLetterEnds(),["s","t"])
 }); 
 
 

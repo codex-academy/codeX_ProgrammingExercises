@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Unit Tests for - the words utility</title>
+	<title>Unit Tests for - Numbers</title>
 	<link rel="stylesheet" type="text/css" href="../qunit/qunit.css">
 	<script src="../qunit/qunit.js"></script>
-	<script src="words-utility.js"></script>
-	<script src="words-utility-tests.js"></script>
+	<script src="number-utility.js"></script>
+	<script src="test-number-utility.js"></script>
 </head>
 <body>
 	<div id="qunit">
