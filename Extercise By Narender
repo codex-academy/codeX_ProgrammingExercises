@@ -1,0 +1,8 @@
+//C programming excersise
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+system('CLS');
+printf("Please Provide some excersise on Dynamic memory Allocation: ");
+}
