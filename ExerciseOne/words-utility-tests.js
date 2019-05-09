@@ -7,8 +7,8 @@ QUnit.test( "test if words are counted correctly", function( assert ) {
 });
 
 QUnit.test( "find the longest word", function( assert ) {
-  	var wordsUtility = new WordsUtility("ola yeah yoyoyo yoda");
-	assert.equal(wordsUtility.longestWord(), "yoyoyo");
+  	var wordsUtility = new WordsUtility(theWords);
+	assert.equal(wordsUtility.longestWord(), "dependencies");
 });
 
 QUnit.test( "the average word length of words supplied", function( assert ) {
@@ -31,8 +31,8 @@ QUnit.test( "no words with the same length return nothing", function( assert ) {
 });
 
 QUnit.test( "find the shortest word", function( assert ) {
-  	var wordsUtility = new WordsUtility("ola yeah yoyoyo");
-	assert.equal(wordsUtility.shortestWord(), "ola");
+  	var wordsUtility = new WordsUtility(theWords);
+	assert.equal(wordsUtility.shortestWord(), "A");
 });
 
 QUnit.jUnitReport = function(report) {
