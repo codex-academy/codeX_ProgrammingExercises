@@ -1,0 +1,9 @@
+.col-lg-6 {
+	border: 1px solid green; 
+	height: 30px;	
+}
+
+.col-lg-12 {
+	border: 1px solid red; 
+	height: 200px;	
+}

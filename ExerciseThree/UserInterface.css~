@@ -1,0 +1,84 @@
+#container {
+  
+  height: 550px; 
+  width: 300px; 
+  border: 1px solid orange; 
+  background-color: orange; 
+  border-radius: 15px;
+  
+} 
+
+#searchBox {
+  
+  height: 140px;
+  width: 350px;
+  border: 2px solid #FF4500; 
+  border-radius: 15px;
+  margin-top: 20px;
+  background-color: #FF4500;
+}
+ 
+#numbers { 
+
+  height: 250px;
+  width: 300px;
+  //border: 1px solid black; 
+  //background-color: #EC9242;
+
+} 
+
+#numbers2 { 
+
+  height: 250px;
+  width: 300px;
+  //border: 1px solid green; 
+  //background-color: #EC9242;
+
+}  
+
+#errmsg
+{
+color: red;
+}
+
+.inputs {
+  border-radius: 5px; 
+  height: 20px; 
+  border: 2px solid #FF8C00; 
+  padding: 2px; 
+  
+
+} 
+
+.inputs2 {
+  border-radius: 5px; 
+  height: 20px; 
+  border: 2px solid red; 
+  padding: 2px; 
+  
+
+}  
+
+#add {
+
+  border-radius: 5px; 
+  height: 30px;
+  width: 90px; 
+  #border: 2px solid #FF8C00; 
+  padding: 2px; 
+  font-family: "Helvetica";
+} 
+
+h1, h3 {
+  font-family: "Helvetica";
+} 
+
+.AddedContacts {
+  border: 1px solid #FF4400; 
+  margin-bottom: 5px; 
+   
+} 
+
+.AddedContacts:hover{
+  background-color: yellow;
+}
