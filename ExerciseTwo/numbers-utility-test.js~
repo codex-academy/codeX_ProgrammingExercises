@@ -1,0 +1,43 @@
+theNumbers=[1234,56,7,8,910,111,213,145,16,17,182,19,20,21,23,24,25,26,27,28,29,30,31,32,33,40,4143,4,445,56,57585,602,465,669,776,77,78,80];
+
+
+QUnit.test( "test if numbers are counted correctly", function( assert ) {
+  	var numbersUtility = new NumbersUtility(theNumbers);
+	assert.equal(numbersUtility.amountOfNumbers(), 41);
+});
+
+QUnit.test( "find the biggest number", function( assert ) {
+  	var wordsUtility = new WordsUtility(theWords);
+
+	assert.equal(wordsUtility.longestWord(), "dependencies");
+});
+
+QUnit.test( "the average of all the numbers", function( assert ) {
+  	var wordsUtility = new WordsUtility(theWords);
+	
+        assert.ok(1 == "1", "ola");assert.equal(wordsUtility.averageWordLength(), "1");
+});
+
+QUnit.test( "find the smallest number", function( assert ) {
+
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo yoda");
+  	var words = wordsUtility.wordsWithTheSameLength();
+});
+
+
+QUnit.test( "find all even numbers", function( assert ) {
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo yoda");
+
+  	assert.equal(0, wordsUtility.wordsWithTheSameLength().length);
+
+});
+
+QUnit.test( "find ", function( assert ) {
+  	var wordsUtility = new WordsUtility("ola yeah yoyoyo");
+	assert.equal(wordsUtility.shortestWord(), "ola");
+});
+
+QUnit.jUnitReport = function(report) {
+    console.log(report.xml);
+};
+
